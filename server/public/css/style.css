@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+section{
+    margin-top: 50px;
+}
+body{
+    position: relative;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(216, 182, 158);
+    box-shadow: 0 0 1px black;
+    z-index: 10;
+}
+.menu{
+    display: flex;
+}
+.logo{
+    color: rgb(238, 111, 47);
+    font-weight: 700;
+    font-size: 25px;
+}
+.logo span {
+    color: rgb(240, 230, 38);
+}
+.menu li {
+    margin: 0 15px;
+    list-style: none;
+
+}
+.menu li a {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: 0;
+    color: rgb(244, 246, 127);
+    position: relative;
+}
+.menu li a::before {
+    position: absolute;
+    bottom : -5px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 6px;
+    background-color: rgb(14, 14, 15);
+    transition: 0.5s;
+
+}
+.menu li a:hover::before {
+    width: 100%;
+}
+.menu li a::after {
+    position: absolute;
+    bottom : -5px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 6px;
+    background-color: rgb(234, 241, 245);
+    transition: 0.5s;
+}
+.menu li a:hover::after {
+    width: 100%;
+}
+.menu li a:hover{
+    color: yellow;
+}
+#home {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: calc(100vh - 50px);
+    justify-content: space-between;
+}
+#home .left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#home .left h4 {
+    font-size: 20px;
+    color: rgb(215, 206, 32);
+}
+#home .left h1 {
+    font-size: 30px;
+    color: rgb(232, 18, 18);
+}
+#home .left p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+
+}
+#home .left button{
+    margin-top: 20px;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: rgb(220, 138, 61);
+    border: 0;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+#home .left button a{
+    text-decoration: 0;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#home .left button::before{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgb(245, 240, 75);
+}
+#home .left button:hover a{
+    letter-spacing: 1px;
+
+}
+#home .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#home .right img {
+    width: 100%;
+    animation: animate 2s linear;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+@keyframes animate {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: bisque;
+    padding: 50px 10px;
+
+}
+.mini_title {
+    margin-top: 25px;
+    font-size: 16px;
+    color: rgb(208, 114, 32);
+    text-transform: capitalize;
+
+}
+.title  {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(91, 91, 97);
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+.dishes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+
+}
+.dishes .dish {
+    height: 240px;
+    width: 32%;
+    background-color: antiquewhite;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    margin-bottom: 35px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgb(118, 118, 121);
+
+}
+.dishes .dish img {
+    width: 130px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+.dishes .dish p {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+
+}
+.dishes .dish a {
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: 0;
+    background-color: rgb(205, 209, 206);
+    padding: 5px 60px;
+    color: #aa5b0d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 6px;  
+}
+::-webkit-scrollbar{
+    width: 8px;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: #724d2a;
+}
+#about_us{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 50px);
+    flex-direction: column;
+    padding: 50px 10%;
+    width: 100%;
+
+}
+.about{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: 70vh;
+
+}
+.about .left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.about .left img{
+    width: 90%;
+    border-radius: 50%;
+}
+.about .right{
+    width: 60%;  
+}
+.about .right h3{
+    font-size: 30px;
+    color: rgb(235, 198, 179);
+    margin: 10px 0;
+}
+.about .right p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about .right button{
+    margin-top: 20px;
+    width: fit-content;
+    padding: 5px 60px;
+    background-color: rgb(175, 89, 35);
+    border: 0;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+.about .right button a{
+    text-decoration: 0;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.about .right button::before{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgb(220, 217, 36);
+}
+.about .right button:hover a{
+    letter-spacing: 1px;
+
+}
+.coment{
+    
+    height: auto;
+    /* background-color: #ed4bda; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 50px);
+    flex-direction: column;
+    padding: 0 10px;
+
+}
+.frame {
+    background-color: #e3cf82;
+    width: 90%;
+    border: 1px solid #000; /* Add border for the frame */
+    padding: 0; /* Add padding to give space around the elements */
+}
+.com{
+    
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.com .cm div{
+    
+    display: flex;
+    /* background-color: aquamarine; */
+    align-items: center;
+    margin-bottom: 10px;
+}
+.com .cm div img{
+    
+    width: 45px;
+    height: 45px;
+    border: 2px rgb(182, 146, 4);
+    border-radius: 50%;
+}
+.com .cm{
+    
+    width: 30%;
+    /* border: 1px rgb(231, 102, 17); */
+    border: 6px;
+    padding: 20px;
+
+}
+.com .cm div h4{
+    width: 100%;
+    margin-left: 15px;
+    font-size: 14px;
+    color: rgb(170, 102, 67);
+}
+.com .cm p {
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#reservation{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#reservation form{
+    display: flex;
+    background-color: rgb(216, 182, 158);
+    padding: 25px;
+    border-radius: 6px;
+    flex-direction: column;
+    width: 50%;
+
+}
+#reservation form label{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+#reservation form input{
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px rgb(21, 21, 19);
+    outline: 0;
+}
+#reservation form input:focus{
+    outline: 1px rgb(161, 130, 159);
+
+}
+#reservation form input[type="submit"]{
+    margin-top: 15px;
+    color: #6f3006;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(237, 159, 110);
+    border: 1px solid #0f0f0e;
+
+}
+footer{
+    background-color: antiquewhite;
+    display: flex;
+}
+
+footer .serv{
+    display: flex;
+    width: 20px;
+    height: 100%;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+footer .serv img{
+    display: flex;
+    width: 40px;
+    background-color: #ab7d5d;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+footer .serv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px auto;
+}
+footer .serv p{
+    color: #592a09;
+}
+
+.ft{
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    background-color: #ab7d5d;
+}
+.ft span{
+    color: rgb(112, 34, 16);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+.pp{
+    /* display: flex; */
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.togl{
+    display: none;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-color: #efe8e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.togl::before{
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 28px;
+    background-color: #643908;
+    border-radius: 6px;
+    box-shadow: 0 10px 0 #643908;
+    transform: translateY(-10px);
+    transition: 0.7s;
+}
+.togl.active::before{
+    transform: translateY(0) rotate(120deg);
+    box-shadow: 0 0 0 #643908;
+}
+.togl::after{
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 28px;
+    background-color: #643908;
+    border-radius: 6px;
+    transform: translateY(10px);
+    transition: 0.7s;
+}
+.togl.active::after{
+    transform: translateY(0) rotate(-120deg);
+    
+}
+header .menu.responsive{
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6f3006;
+    box-shadow: #e3cf82;
+    flex-direction: column;
+} 
